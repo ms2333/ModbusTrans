@@ -1,6 +1,8 @@
 # ModbusTrans
 Base on ModbusProtocol ,Developed on the WPF platform,Integrated Modbus Serial/TCP To facilitate extension
+
 软件介绍：
+
 1.本程序基于plc通讯协议Modbus serial/tcp/ip开发，使用.net wpf平台界面，功能界面预留多处可扩展空间。
 2.通讯协议集成在了ModbusClass.cs类中（单例模式），通用的Modbus协议类库。
 
