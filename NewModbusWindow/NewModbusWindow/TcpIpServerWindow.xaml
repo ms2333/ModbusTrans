@@ -1,0 +1,36 @@
+﻿<Window x:Class="NewModbusWindow.TcpIpServerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewModbusWindow"
+        mc:Ignorable="d"
+        Title="TcpIpServerWindow" Height="450" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="70*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Column="0" Grid.Row="1">
+            <Label Content="Ip Address" FontSize="16" Canvas.Left="55"/>
+            
+        </Canvas>
+        <TextBox x:Name="IpTextBox" Margin="0,35,123.6,0.4" Grid.RowSpan="2" Grid.Column="1" />
+        <Button x:Name="IpTrue" Grid.Column="1" Content="OK" Margin="382,35,9.6,0.4" Grid.RowSpan="2" Click="IpTrue_Click"/>
+        <TextBox x:Name="StateTextbox" Text="Condition >>>" Grid.Row="3" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="2" Background="#f7fffd"/>
+    </Grid>
+</Window>

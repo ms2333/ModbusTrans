@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="NewModbusWindow.PresetMultiRegWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NewModbusWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500" Background="#aeefff">
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel   Grid.Row="0">
+            <Label Content="Slave Address" VerticalAlignment="Center" Margin="10"/>
+            <TextBox x:Name="SlaveAddressBox" FontSize="20" VerticalAlignment="Center" Margin="3,20,15,25"/>
+        </DockPanel>
+        <DockPanel   Grid.Row="1">
+            <Label Content="Start Address" VerticalAlignment="Center" Margin="10"/>
+            <TextBox x:Name="StartAddressBox" FontSize="20" VerticalAlignment="Center" Margin="6,20,15,25"/>
+        </DockPanel>
+        <DockPanel   Grid.Row="2">
+            <Label Content="RegisterNum" VerticalAlignment="Center" Margin="13"/>
+            <TextBox x:Name="RegisterNumTextBox" FontSize="20" VerticalAlignment="Center" Margin="2,20,15,25"/>
+        </DockPanel>
+        <!--后期可以扩展或者删除-->
+        <DockPanel   Grid.Row="3">
+            <Label Content="   SetValue   " VerticalAlignment="Center" Margin="13"/>
+            <TextBox x:Name="SetValueTextbox" FontSize="20" VerticalAlignment="Center" Margin="5,20,15,25"/>
+        </DockPanel>
+
+        <DockPanel   Grid.Row="6">
+            <Button x:Name="send" Content="确定"  Margin="30,15,30,15" Background="#FFC5FEFF" Click="send_Click" />
+        </DockPanel>
+        <DockPanel Grid.Row="5" Grid.RowSpan="1">
+            <TextBox x:Name="SetPreOneByteTextbox"  FontSize="10" Background="Black" Foreground="White" />
+        </DockPanel>
+    </Grid>
+</UserControl>

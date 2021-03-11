@@ -1,0 +1,79 @@
+﻿<Window x:Class="NewModbusWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewModbusWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="530" Width="912.966" WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF525252"/>
+            <GradientStop Color="Gainsboro" Offset="1"/>
+            <GradientStop Color="#FF3F3F3F" Offset="0.144"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="317*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="1" Margin="0,0,0.4,0" >
+            <Image x:Name="image" Source="Resources/f1-021.jpg" Stretch="UniformToFill"/>
+        </DockPanel  >
+        <Grid x:Name="SonWindow"  Margin="35,0,0.4,0" Grid.Column="1" />
+
+        <Grid Grid.Row="0" Grid.Column="0" >
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="20*" />
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="6" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <DockPanel Grid.Column="0" Grid.Row="0">
+                    <Label Content="             串口选择" HorizontalAlignment="Center" FontSize="12" VerticalAlignment="Center" Margin="10,35,0,25.2" Width="148" Height="25" />
+                </DockPanel>
+                <DockPanel Grid.Column="1" Grid.ColumnSpan="3"  Grid.Row="0" Margin="0,0,15,00">
+                    <ComboBox Name="combobox" Margin="10,28,0,21" BorderBrush="Black">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF464646" Offset="0"/>
+                                <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                </DockPanel>
+            </Grid>
+            <DockPanel Grid.Column="0" Grid.Row="0">
+                <Button x:Name="readHoldingRegButton" Content="读取保持型寄存器" Click="readHoldingRegButton_Click" Margin="10,15,10,15"/>
+            </DockPanel>
+            <DockPanel Grid.Column="0" Grid.Row="1">
+                <Button x:Name="PreSetHoldingRegButton" Content="预置单字节型保持寄存器" Margin="10,15,10,15" Click="PreSetHoldingRegButton_Click"/>
+            </DockPanel>
+            <DockPanel Grid.Column="0" Grid.Row="2">
+                <Button x:Name="PreSetMultiRegButton" Content="预置多个寄存器" Margin="10,15,10,15" Click="PreSetMultiRegButton_Click"/>
+            </DockPanel>
+            <DockPanel Grid.Column="0" Grid.Row="3">
+                <Button x:Name="ReadOutputCoil" Content="读取多输出线圈" Margin="10,15,10,15" Click="ReadOutputCoil_Click"/>
+            </DockPanel>
+            <DockPanel Grid.Column="0" Grid.Row="4">
+                <Button x:Name="ReadInputCoil" Content="读取多输入线圈" Margin="10,15,10,15" Click="ReadInputCoil_Click"/>
+            </DockPanel>
+            <DockPanel Grid.Column="0" Grid.Row="5">
+                <Button x:Name="ConstraintSetButton" Content="强制置位/复位" Margin="10,15,10,15" Click="ConstraintSetButton_Click"/>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</Window>

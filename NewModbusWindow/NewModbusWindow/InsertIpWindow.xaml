@@ -1,0 +1,21 @@
+﻿<Window x:Class="NewModbusWindow.InsertIpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewModbusWindow"
+        mc:Ignorable="d"
+        Title="InsertIpWindow" Height="40" Width="348.2" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <TextBox x:Name="InsertIpTextBox" FontSize="18" VerticalAlignment="Center" BorderBrush="White" Height="34"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Button x:Name="TrueButton"  Content="OK" FontSize="12" Click="TrueButton_Click" BorderBrush="White" Background="Aqua" />
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="NewModbusWindow.receivedWindows"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NewModbusWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" >
+            <TextBox x:Name="sendTextBox" FontSize="15" Background="#eDFFFF" BorderBrush="Black" Text="Send>>>"/>
+        </DockPanel>
+        <DockPanel Grid.Row="1" >
+            <TextBox x:Name="receiveTextBox" FontSize="15" Background="#eDFFFF" BorderBrush="Black" Text="Receive>>>"/>
+        </DockPanel>
+    </Grid>
+</UserControl>
