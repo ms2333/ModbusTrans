@@ -5,6 +5,7 @@ Base on ModbusProtocol ,Developed on the WPF platform,Integrated Modbus Serial/T
 
 1.本程序基于plc通讯协议Modbus serial/tcp/ip开发，使用.net wpf平台界面，功能界面预留多处可扩展空间。
 2.通讯协议集成在了ModbusClass.cs类中（单例模式），通用的Modbus协议类库。
+3.查看协议源码：https://github.com/ms2333/ModbusTrans/blob/9fa1541d7e9bad1aa4d42f0511e6a9e596061cb2/NewModbusWindow/NewModbusWindow/ModbusClass.cs
 
 开始界面：
 
